@@ -1,0 +1,186 @@
+:root {
+  --primary-green: #01F0D0;
+  --light-green: #D8FCF7;
+  --bg-main: #F6F6F6;
+  --bg-card: #FFFFFF;
+  --text-dark: #072635;
+  --text-gray: #707070;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background: var(--bg-main);
+}
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: white;
+}
+
+.logo img {
+  height: 30px;
+}
+
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr 340px;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: auto;
+  align-items: start;
+}
+
+
+.sidebar {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.patient {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.patient.active {
+  background: var(--light-green);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+
+.chart-card {
+  background: #f3f0fa;
+}
+
+.chart-container {
+  display: flex;
+  gap: 20px;
+}
+
+.chart-left {
+  flex: 2;
+}
+
+.bp-summary {
+  flex: 1;
+  background: #f3f0fa;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.bp-summary hr {
+  margin: 15px 0;
+}
+
+.high { color: green; font-size: 13px; }
+.low { color: purple; font-size: 13px; }
+
+canvas {
+  height: 250px !important;
+}
+
+
+.vitals {
+  display: flex;
+  gap: 20px;
+}
+
+.vital-card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.blue { background: #E0F3F9; }
+.pink { background: #FCE4EC; }
+.red { background: #FDECEA; }
+
+.icon {
+  width: 40px;
+}
+
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.info img {
+  width: 20px;
+}
+
+
+.diagnostic-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.diagnostic-table th,
+.diagnostic-table td {
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+
+.lab-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lab-results li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}

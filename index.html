@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="logo">
+    <img src="assets/logo.svg">
+  </div>
+
+  <nav class="nav">
+    <span>Overview</span>
+    <span class="active">Patients</span>
+    <span>Schedule</span>
+    <span>Message</span>
+    <span>Transactions</span>
+  </nav>
+
+  <div class="profile">Dr. Jose Simmons</div>
+</header>
+
+<div class="layout">
+
+  
+  <aside class="sidebar">
+    <h3>Patients</h3>
+
+    <div class="patient active">
+      <img src="assets/profile.png" class="avatar">
+      <div>
+        <p>Jessica Taylor</p>
+        <span>Female, 28</span>
+      </div>
+    </div>
+  </aside>
+
+  
+  <main class="content">
+
+    
+    <section class="card chart-card">
+      <h2>Diagnosis History</h2>
+
+      <div class="chart-container">
+
+        <div class="chart-left">
+          <canvas id="bpChart"></canvas>
+        </div>
+
+        <div class="bp-summary">
+          <div>
+            <p>Systolic</p>
+            <h3 id="systolic-value">--</h3>
+          </div>
+
+          <hr>
+
+          <div>
+            <p>Diastolic</p>
+            <h3 id="diastolic-value">--</h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section class="vitals">
+
+      <div class="vital-card blue">
+        <img src="assets/lungs.svg" class="icon">
+        <p>Respiratory Rate</p>
+        <h3 id="respiratory">--</h3>
+        <span>Normal</span>
+      </div>
+
+      <div class="vital-card pink">
+        <img src="assets/temperature.svg" class="icon">
+        <p>Temperature</p>
+        <h3 id="temperature">--</h3>
+        <span>Normal</span>
+      </div>
+
+      <div class="vital-card red">
+        <img src="assets/heart.svg" class="icon">
+        <p>Heart Rate</p>
+        <h3 id="heart">--</h3>
+        <span>--</span>
+      </div>
+
+    </section>
+
+    
+    <section class="card">
+      <h2>Diagnostic List</h2>
+
+      <table class="diagnostic-table">
+        <thead>
+          <tr>
+            <th>Problem</th>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="diagnostic-body"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  
+  <aside class="right-panel">
+
+    <img src="assets/profile.png" id="profile-img" class="profile-img">
+
+    <h2 id="name">--</h2>
+
+    <div class="info">
+      <img src="assets/birth.svg">
+      <p id="dob"></p>
+    </div>
+
+    <div class="info">
+      <img id="gender-icon">
+      <p id="gender"></p>
+    </div>
+
+    <div class="info">
+      <img src="assets/phone.svg">
+      <p id="phone"></p>
+    </div>
+
+    <div class="info">
+      <img src="assets/insurance.svg">
+      <p id="insurance"></p>
+    </div>
+
+    <h3>Lab Results</h3>
+    <ul id="lab-list"></ul>
+
+  </aside>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
